@@ -1,0 +1,480 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+*,*:before,*:after{
+    box-sizing:border-box
+  }
+
+  body {
+    padding-top: 60px;
+    background: #fff;
+    max-width: 1296px;
+    margin: 0 auto;
+    line-height: 1.5;
+    font-family: "Noto Sans TC", sans-serif;
+    color:#3B3B3B;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+
+  }
+  
+
+  .header {
+    background: #fff;
+    border-bottom: 1px solid #F1F1F1;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  .header-inner{
+    display: flex;
+    align-items: center;
+    flex-wrap:wrap;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  .banner{
+    max-width: 1296px;
+    margin: 0 auto;
+  }
+  @media(max-width:1295px){
+    .banner .work container .footer{
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+  }
+  .logo {
+    margin-right: 318px;
+  }
+
+  .menu {
+    display: flex;
+    gap: 40px
+  }
+  
+  .menu .menu-list a{
+    color: #000;
+    font-size: 16px;
+    line-height: 1.5;
+    text-decoration: none;
+    padding: 4px 8px;
+    position: relative;
+  }
+  
+  .menu .menu-list a::before,
+  .menu .menu-list a::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border: 1px solid #919191;
+    opacity: 0;
+    -webkit-box-reflect: below 16px;
+  }
+  
+  .menu .menu-list a::before {
+    top: 0;
+    left: 0;
+    border-right: none;
+    border-bottom: none;
+  }
+  
+  .menu .menu-list a::after {
+    top: 0;
+    right: 0;
+    border-left: none;
+    border-bottom: none;
+  }
+  
+  .menu .menu-list a:hover::before,
+  .menu .menu-list a:hover::after {
+    opacity: 1;
+  }
+  .menu-btn {
+    display: none;
+    cursor: pointer;
+  }
+  .menu-btn .menu-icon {
+    display: none;
+  }
+  .menu-control:checked + .menu-btn .open {
+    display: none;
+  }
+  .menu-control:checked + .menu-btn .close {
+    display: inline;
+  }
+  .menu-control:not(:checked) + .menu-btn .open {
+    display: inline;
+  }
+  .menu-control:not(:checked) + .menu-btn .close {
+    display: none;
+  }
+  .menu-control {
+    display: none;
+  }
+  
+  .banner{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FAFAFA;
+    margin-bottom: 120px;
+    padding: 80px;
+  }
+  .title{
+    display: flex;
+    flex-direction: column;  
+    margin-bottom: 24px;
+    position: relative;
+  }
+  .title-text{
+    text-align: center;
+    font-size: 24px;
+    line-height: 28.8px;
+    margin: 59px 72px;
+  }
+
+  .hightlight {
+    background: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/mark.png?raw=true);
+    background-repeat: no-repeat;
+    background-position: bottom 1px right 0px;
+    padding-right: 16px;
+  }
+  .hightlight-sm {
+    background: none;
+  }
+  .quote1{
+    width: 72px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .quote2{
+    width: 72px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  .subtitle-list{
+    max-width: 636px;
+    display: flex;
+    gap: 40px;
+  }
+  .subtitle{
+    width: 50%;
+    height: 84px;
+    text-align: center;
+  }
+  .subtitle p{
+    font-size: 16px;
+    line-height: 24px;
+    color: #3B3B3B;
+  }
+  .subtitle p:nth-child(2){
+    width: 24px;
+    color: #5B5B5B;
+    border-bottom: 2px solid #C1C1C1;
+    margin: 0 auto;
+  }
+
+  .work container{
+    max-width: 1296px;
+    width: 100%;
+    margin: 0 auto;  
+    margin-top: 120px;
+    margin-bottom: 120px;
+  }
+  .work{
+    display: flex;
+    flex-wrap: wrap;    
+    justify-content:space-between; 
+  
+  }
+  .item{
+    margin: 0 auto;
+    max-width: 48%;
+    margin-bottom: 80px;
+  }
+  .pic{
+    display: block;
+    width: 636px;
+    border:1px solid #F1F1F1;
+    border-radius: 8px;
+    margin-bottom: 16px;
+  }
+  h2{
+    font-size: 28px;
+    font-weight: 700;    
+    line-height: 1.2;    
+    margin-bottom: 8px;
+    color: #3B3B3B;
+    padding-left: 16px;
+  }
+  .dis{
+    color: #919191;
+    padding-left: 16px;
+  }
+  .keyword{
+    display: flex;
+    align-items: center;    
+    margin-top:24px;
+    padding-left: 16px;
+  }
+  
+  .keyword li{
+    margin-right: 16px;
+  }
+  .keyword li a{
+    display: block;
+    margin: 2px; 
+    padding: 4px 12px 4px 12px;
+    border-radius: 16px;
+    text-decoration: none;
+    color: #3B3B3B;  
+    background-color: #F1F1F1;
+  }
+  .pageNumber{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  .pageNumber a{
+    border-radius: 4px;
+    display: block;
+    text-decoration: none;
+    padding: 2px 13px 2px 13px;
+    font-size: 24px;
+    color: #3B3B3B; 
+  }
+  .pageNumber a:hover{
+    background: #3B3B3B;
+    color:white;
+  }
+  
+  .footer container{
+    background-image: url(https://hex2024.worksbyaaron.com/image/footer/footer-bg-lg.webp);
+    background-size: cover;
+    width: full-screen;
+  }
+  .footer{
+    width: 100%;
+    max-width: 1296px;
+    margin: auto;
+    padding: 80px 12px;
+    display: flex;
+    justify-content: space-between;
+  }
+  div.close{
+    display: flex;
+    flex-direction: column;
+    gap:24px;
+  }
+  img.logo-close{
+    width: 101px;
+  }
+  p.intro{
+    font-size: 20px;
+  }
+  p.mail{
+    font-size: 20px;
+    color: #919191;
+  }
+  
+  ul.close{
+    width: 306px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 24px;
+  }
+  li.close{
+    border-radius: 8px;
+    border: 1px solid #C1C1C1;
+    color: whigt;
+    gap: 13px;
+    padding: 8px 24px;
+    display: block;
+    display: flex;
+    align-items: center;
+  }
+  li.close1{
+    border-radius: 8px;
+    background: black;
+    gap: 13px;
+    padding: 8px 24px;
+    display: flex;
+    align-items: center;
+  }
+  img.close{
+    height: 56px;
+  }
+  p.close{
+    font-size: 20px;
+  }
+  p.close1{
+    font-size: 20px;
+    color:white;
+  }
+  
+
+  @media (max-width: 767px) {
+    .logo {
+      margin-right: 0px;
+    }
+    .header-inner{
+      justify-content: space-between;
+    }
+    .header-inner{
+      justify-content: space-between;
+  }
+  .menu-btn{
+    display: block;
+  }
+  .menu {
+    display: none;
+  }
+ 
+  .menu-control:checked ~ .menu {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+    
+  .header{
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .head-menu{
+    flex-direction: column;
+    flex-wrap: wrap;  
+    align-items: center;
+    gap: 12px;
+  }
+  .subtitle-list{
+    flex-direction: column;
+    flex-wrap: wrap;  
+    align-items: center;
+  }
+  .work container{
+    margin-top:80px;
+    margin-bottom: 80px;
+  }
+  .work{
+    gap:48px;
+  }
+  .item{
+    max-width: 100%;
+    margin-bottom: 48px;
+  }
+  .footer{
+    padding: 40px 0px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  div .close{
+    margin-bottom: 40px;
+  }
+
+  p.intro{
+    font-size: 16px;
+  }
+p.mail{
+  font-size: 20px;
+  color: #919191;
+}
+
+ul.close{
+  width: 306px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+}
+li.close{
+  border-radius: 8px;
+  border: 1px solid #C1C1C1;
+  color: whigt;
+  gap: 13px;
+  padding: 8px 24px;
+  display: block;
+  display: flex;
+  align-items: center;
+}
+li.close1{
+  border-radius: 8px;
+  background: black;
+  gap: 13px;
+  padding: 8px 24px;
+  display: flex;
+  align-items: center;
+}
+img.close{
+  height: 56px;
+}
+p.close{
+  font-size: 20px;
+}
+p.close1{
+  font-size: 20px;
+  color:white;
+}
+
+}
+  
